@@ -1,5 +1,6 @@
-import { FormEvent, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { authApi } from '../features/auth/authApi';
 import { setAccessToken } from '../lib/auth/tokenStorage';
 
@@ -49,6 +50,10 @@ export function LoginPage() {
         <button type="submit" disabled={submitting}>
           {submitting ? 'Signing in...' : 'Sign in'}
         </button>
+
+        <p className="auth-footer">
+          New to FleetMatch? <Link to="/register">Create company account</Link>
+        </p>
       </form>
     </main>
   );
