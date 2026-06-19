@@ -3,6 +3,8 @@ import { AppLayout } from '../components/layout/AppLayout';
 import { DashboardPage } from '../pages/DashboardPage';
 import { LoginPage } from '../pages/LoginPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
+import { RegisterPage } from '../pages/RegisterPage';
+import { VerificationPendingPage } from '../pages/VerificationPendingPage';
 
 export const router = createBrowserRouter([
   {
@@ -14,5 +16,7 @@ export const router = createBrowserRouter([
     ],
   },
   { path: '/login', element: <LoginPage /> },
+  { path: '/register', element: <RegisterPage /> },
+  { path: '/verification-pending', element: <VerificationPendingPage /> },
   { path: '*', element: <NotFoundPage /> },
 ]);
